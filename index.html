@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Quiz Application</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Interactive Quiz Challenge</h1>
+
+      <div class="quiz-intro" id="intro">
+        <p>Test Your Knowledge</p>
+        <p>
+          You'll have 15 seconds to answer each question. Get instant feedback
+          and track your progress.
+        </p>
+        <button class="btn btn-start" id="start-btn">Start Quiz</button>
+      </div>
+
+      <div class="quiz-container" id="quiz">
+        <div class="timer" id="timer">Time: 15s</div>
+        <div class="progress-bar">
+          <div class="progress" id="progress"></div>
+        </div>
+
+        <div class="question-container">
+          <div class="question-number" id="question-number">
+            Question 1 of 10
+          </div>
+          <div class="question-text" id="question-text"></div>
+          <div class="options-container" id="options-container"></div>
+          <div class="feedback" id="feedback"></div>
+        </div>
+
+        <div class="navigation">
+          <button class="btn" id="prev-btn" disabled>Previous</button>
+          <button class="btn" id="next-btn">Next Question</button>
+          <button class="btn" id="submit-btn" style="display: none">
+            Submit Quiz
+          </button>
+        </div>
+      </div>
+
+      <div class="score-container" id="score-container">
+        <div class="score-title">Quiz Completed!</div>
+        <div class="score-value" id="score-value">0/10</div>
+        <p id="score-message"></p>
+        <button class="btn" id="restart-btn">Take Quiz Again</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
